@@ -1,0 +1,163 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff5722;
+    padding: 10px 20px;
+    color: white;
+}
+
+.nav a {
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: #fff9c4;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 40px;
+    background: url('hero.png') no-repeat center center;
+    background-size: cover;
+    height: 400px;
+    color: white;
+}
+
+.hero-text {
+    max-width: 500px;
+}
+
+.cta-button {
+    padding: 10px 20px;
+    background-color: #f44336;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #d32f2f;
+}
+
+.ranking-journey {
+    padding: 20px;
+    background: url('skillstages.png') no-repeat center center;
+    background-size: cover;
+    height: 200px;
+    color: white;
+}
+
+.learning-paths {
+    padding: 20px;
+    background: url('options.png') no-repeat center center;
+    background-size: cover;
+    height: 200px;
+    color: white;
+}
+
+.paths-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.learning-card {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    border-radius: 5px;
+    min-width: 200px;
+    color: #333;
+}
+
+.leaderboard {
+    padding: 20px;
+    background: url('leaderboard.png') no-repeat center center;
+    background-size: cover;
+    height: 200px;
+    color: white;
+}
+
+.digital-pillar {
+    padding: 20px;
+    background: url('digitalpeer.png') no-repeat center center;
+    background-size: cover;
+    height: 200px;
+    color: white;
+}
+
+.feedback {
+    padding: 20px;
+    background: url('feedback.png') no-repeat center center;
+    background-size: cover;
+    height: 200px;
+    color: white;
+}
+
+.stages {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 20px;
+}
+
+.stage {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    border-radius: 5px;
+    min-width: 200px;
+    color: #333;
+}
+
+.footer {
+    background-color: #ff5722;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer .social-links a {
+    margin: 0 10px;
+}
+
+.footer a:hover {
+    color: #fff9c4;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .nav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header {
+        flex-direction: column;
+    }
+
+    .stages, .paths-container {
+        flex-direction: column;
+    }
+}
