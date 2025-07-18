@@ -277,29 +277,50 @@ section h2 {
     z-index: 1;
 }
 
-/* Footer */
+/* Updated Footer Styles */
 .footer {
     background-color: #ff5722;
     color: white;
     padding: 40px 20px;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    padding: 0 15px;
 }
 
 .contact-info {
-    margin-bottom: 20px;
     font-size: 1.1rem;
+    margin-bottom: 15px;
 }
 
 .social-links {
-    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .social-links a {
     color: white;
     text-decoration: none;
-    margin: 0 15px;
-    font-size: 1.1rem;
     transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .social-links a:hover {
@@ -308,7 +329,9 @@ section h2 {
 
 .legal {
     font-size: 0.9rem;
-    margin-top: 20px;
+    margin-top: 30px;
+    text-align: center;
+    width: 100%;
 }
 
 /* Responsive Design */
@@ -351,6 +374,21 @@ section h2 {
     .stage, .learning-card {
         width: 100%;
         max-width: 350px;
+    }
+    
+    /* Mobile footer adjustments */
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .footer-column {
+        min-width: 100%;
+        text-align: center;
+    }
+    
+    .social-links {
+        align-items: center;
     }
 }
 
