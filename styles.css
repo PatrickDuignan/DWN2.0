@@ -1,0 +1,303 @@
+/* Basic Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff5722;
+    padding: 15px 20px;
+    color: white;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.nav a {
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: #fff9c4;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    padding: 60px 40px;
+    background: url('hero.png') no-repeat center center;
+    background-size: cover;
+    min-height: 400px;
+    color: white;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.hero-text {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+}
+
+.cta-button {
+    padding: 12px 25px;
+    background-color: #f44336;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #d32f2f;
+}
+
+/* Section Common Styles */
+section {
+    padding: 40px 20px;
+}
+
+section h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 2rem;
+}
+
+/* Ranking Journey */
+.ranking-journey {
+    background: url('skillstages.png') no-repeat center center;
+    background-size: cover;
+    color: white;
+    position: relative;
+}
+
+.ranking-journey::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.ranking-journey h2,
+.ranking-journey .stages {
+    position: relative;
+    z-index: 1;
+}
+
+.stages {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px 0;
+}
+
+.stage {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    min-width: 200px;
+    max-width: 250px;
+    color: #333;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Learning Paths */
+.learning-paths {
+    background: url('options.png') no-repeat center center;
+    background-size: cover;
+    color: white;
+    position: relative;
+}
+
+.learning-paths::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.learning-paths h2,
+.learning-paths .paths-container {
+    position: relative;
+    z-index: 1;
+}
+
+.paths-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.learning-card {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    min-width: 200px;
+    max-width: 250px;
+    color: #333;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Other Sections with Background Images */
+.leaderboard,
+.digital-pillar,
+.feedback {
+    position: relative;
+    color: white;
+}
+
+.leaderboard {
+    background: url('leaderboard.png') no-repeat center center;
+    background-size: cover;
+}
+
+.digital-pillar {
+    background: url('digitalpeer.png') no-repeat center center;
+    background-size: cover;
+}
+
+.feedback {
+    background: url('feedback.png') no-repeat center center;
+    background-size: cover;
+}
+
+.leaderboard::before,
+.digital-pillar::before,
+.feedback::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.leaderboard h2,
+.digital-pillar h2,
+.feedback h2 {
+    position: relative;
+    z-index: 1;
+}
+
+/* Footer */
+.footer {
+    background-color: #ff5722;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.contact-info {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.social-links {
+    margin-bottom: 15px;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #fff9c4;
+}
+
+.legal {
+    font-size: 0.9rem;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav {
+        margin-top: 15px;
+    }
+
+    .nav a {
+        margin: 0 10px;
+    }
+
+    .hero {
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .hero-text {
+        margin: 0 auto;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .stages, .paths-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stage, .learning-card {
+        width: 100%;
+        max-width: none;
+    }
+}
