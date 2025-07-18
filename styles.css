@@ -121,49 +121,58 @@ section h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 40px;
-    padding: 30px 0;
+    gap: 30px;
+    padding: 30px 5%;
     position: relative;
     z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .bubble-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 300px;
+    width: calc(33.333% - 30px);
+    min-width: 250px;
+    margin-bottom: 30px;
 }
 
 .bubble-item h3 {
     color: white;
-    margin-bottom: 20px;
-    font-size: 1.3rem;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
     text-align: center;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    width: 100%;
 }
 
 .bubble-image {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-    border: 5px solid rgba(255,255,255,0.2);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    border: 4px solid rgba(255,255,255,0.2);
     transition: all 0.3s ease;
     position: relative;
     background: rgba(255,255,255,0.1);
 }
 
 .bubble-image:hover {
-    transform: scale(1.05);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.4);
-    border-color: rgba(255,255,255,0.4);
+    transform: scale(1.03);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.4);
+    border-color: rgba(255,255,255,0.3);
 }
 
 .bubble-image img {
+    position: absolute;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    top: 0;
+    left: 0;
 }
 
 /* Ranking Journey */
@@ -188,31 +197,6 @@ section h2 {
     z-index: 1;
 }
 
-.stages {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px 0;
-    position: relative;
-    z-index: 1;
-}
-
-.stage {
-    background-color: transparent;
-    padding: 25px;
-    border-radius: 8px;
-    width: 220px;
-    color: #333;
-    text-align: center;
-    box-shadow: none;
-    transition: transform 0.3s ease;
-}
-
-.stage:hover {
-    transform: translateY(-5px);
-}
-
 /* Learning Paths */
 .learning-paths {
     background: url('options.png') no-repeat center center/cover;
@@ -233,31 +217,6 @@ section h2 {
     color: white;
     position: relative;
     z-index: 1;
-}
-
-.paths-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 25px;
-    padding: 20px 0;
-    position: relative;
-    z-index: 1;
-}
-
-.learning-card {
-    background-color: transparent;
-    padding: 25px;
-    border-radius: 8px;
-    width: 280px;
-    color: #333;
-    text-align: center;
-    box-shadow: none;
-    transition: all 0.3s ease;
-}
-
-.learning-card:hover {
-    transform: translateY(-5px);
 }
 
 /* Leaderboard */
@@ -326,7 +285,7 @@ section h2 {
     z-index: 1;
 }
 
-/* Updated Footer Styles */
+/* Footer Styles */
 .footer {
     background-color: #ff5722;
     color: white;
@@ -384,6 +343,12 @@ section h2 {
 }
 
 /* Responsive Design */
+@media screen and (max-width: 900px) {
+    .bubble-item {
+        width: calc(50% - 20px);
+    }
+}
+
 @media screen and (max-width: 768px) {
     .header {
         flex-direction: column;
@@ -419,22 +384,26 @@ section h2 {
     section {
         padding: 40px 15px;
     }
+}
 
-    .stage, .learning-card {
-        width: 100%;
-        max-width: 350px;
-    }
-    
+@media screen and (max-width: 600px) {
     .bubble-item {
-        max-width: 100%;
+        width: 100%;
+        max-width: 300px;
     }
     
     .bubble-image {
-        width: 200px;
-        height: 200px;
+        padding-bottom: 80%;
+    }
+
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+
+    section h2 {
+        font-size: 1.6rem;
     }
     
-    /* Mobile footer adjustments */
     .footer-content {
         flex-direction: column;
         gap: 20px;
@@ -447,15 +416,5 @@ section h2 {
     
     .social-links {
         align-items: center;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .hero-text h1 {
-        font-size: 1.8rem;
-    }
-
-    section h2 {
-        font-size: 1.6rem;
     }
 }
